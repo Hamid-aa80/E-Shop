@@ -4,7 +4,7 @@ from .models import Category, Product
 from .serializers import CategorySerializer, ProductSerializer
 
 @api_view(['GET'])
-def category_list(request):
+def get_categories(request):
     categories = Category.objects.all()
     serializer = CategorySerializer(categories, many=True)
     return Response(serializer.data)
