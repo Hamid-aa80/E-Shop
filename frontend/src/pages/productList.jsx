@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import ProductCard from "../components/productCard.jsx";
+import ProductCard from "../../components/productCard.jsx";
 
 function ProductList() {
   const [products, setProducts] = useState([]);
