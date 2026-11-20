@@ -56,7 +56,7 @@ function ProductDetaills() {
               £{product.price}
             </p>
             <p className="text-gray-600 mt-4">{product.description}</p>
-            <button onClick={() => addToCart(product)} className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
+            <button onClick={() => addToCart(product.id)} className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
               Add to Cart{" "}
               <img
                 src="https://img.icons8.com/emoji/48/shopping-cart-emoji.png"
