@@ -1,4 +1,5 @@
 import { useCart } from "../context/CartContext.jsx";
+import { Link } from "react-router-dom";
 
 function Cartpage() {
   const { cartItems, total, removeFromCart, updateQuantity } = useCart();
@@ -28,9 +29,7 @@ function Cartpage() {
               </div>
               <div>
                 <h2 className="text-lg font-semibold">{item.product_name}</h2>
-                <p className="text-gray-600">
-                  ${item.product_price}
-                </p>
+                <p className="text-gray-600">${item.product_price}</p>
               </div>
               <div className="flex items-center gap-3">
                 ,
@@ -59,6 +58,12 @@ function Cartpage() {
           <div className="border-t pt-4 mt-4 flex justify-between text-center">
             <h2 className="text-xl font-bold">Total:</h2>
             <p className="text-xl font-semibold">${total.toFixed(2)}</p>
+            <Link
+              to="/checkout"
+              className="bg-blue-600 text-white px-4 py-2 rounded"
+            >
+              Proceed to Checkout
+            </Link>
           </div>
         </div>
       )}
